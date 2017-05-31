@@ -1,0 +1,15 @@
+<label for="sfname">First Name:</label>
+<input id="sfname" name="song[sfname]" type="text" value="<%= ::Temple::Utils.escape_html((@song.sfname)) %>" />
+<label for="slname">Last Name:</label>
+<input id="slname" name="song[slname]" type="text" value="<%= ::Temple::Utils.escape_html((@song.slname)) %>" />
+<label for="major">Major:</label>
+<input id="major" name="song[major]" type="text" value="<%= ::Temple::Utils.escape_html((@song.major)) %>" />
+<label for="gpa">Students GPA:</label>
+<input id="gpa" name="song[gpa]" step="any" type="number" value="<%= ::Temple::Utils.escape_html((@song.gpa)) %>" />
+<label for="birthday">Students Birthday:</label>
+<input id="birthday" name="song[birthday]" type="date" value="<%= ::Temple::Utils.escape_html((@song.birthday)) %>" />
+<label for="address">Students Address:</label>
+<input id="address" name="song[address]" type="text" value="<%= ::Temple::Utils.escape_html((@song.address)) %>" />
+<label for="sid">Students Id:</label>
+<input id="sid" name="song[sid]" type="text" value="<%= ::Temple::Utils.escape_html((@song.sid)) %>" />
+<input type="submit" value="Save Student" />

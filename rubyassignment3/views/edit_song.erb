@@ -1,0 +1,10 @@
+<h1>Edit Student Infomtion</h1>
+<% if @song %>
+<form method="POST" action="/songs/<%= @song.id %>">
+  <input type="hidden" name="_method" value="PUT">
+  <%= erb :song_form%>
+</form>
+<% else %>
+  <p> This student does not exist! </p>
+<% end %>
+

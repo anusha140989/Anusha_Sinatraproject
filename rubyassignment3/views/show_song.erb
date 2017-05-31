@@ -1,0 +1,14 @@
+<h1><%= ::Temple::Utils.escape_html((@song.id)) %>
+</h1><p>First Name: <%= ::Temple::Utils.escape_html((@song.sfname)) %></p>
+<p>Last Name: <%= ::Temple::Utils.escape_html((@song.slname)) %></p>
+<p>Major:  <%= ::Temple::Utils.escape_html((@song.major)) %></p>
+<p>GPA: <%= ::Temple::Utils.escape_html((@song.gpa)) %></p>
+<p>Birthday: <%= ::Temple::Utils.escape_html((@song.birthday)) %></p>
+<p>Address: <%= ::Temple::Utils.escape_html((@song.address)) %></p>
+<p>Student Id: <%= ::Temple::Utils.escape_html((@song.sid)) %></p>
+<p><a href="/songs">Back to Student List</a></p>
+<p><a href="/songs/<%= ::Temple::Utils.escape_html((@song.id)) %>/edit">Edit Student Information</a></p>
+<form action="/songs/<%= ::Temple::Utils.escape_html((@song.id)) %>" method="POST">
+<input name="_method" type="hidden" value="DELETE" />
+<input type="submit" value="Delete Student Information" />
+</form>

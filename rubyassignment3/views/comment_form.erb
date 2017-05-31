@@ -1,0 +1,6 @@
+<label for="name">Please enter your name:</label>
+<input id="name" name="comment[name]" type="text" value="<%= ::Temple::Utils.escape_html((@comment.name)) %>" />
+<label for="comment">Comment:</label>
+<input id="comment" name="comment[comment]" type="text" value="<%= ::Temple::Utils.escape_html((@comment.comment)) %>" />
+<input id="created_at" name="comment[created_at]" type="DateTime" value="<%= ::Temple::Utils.escape_html((@comment.created_at))%>" hidden/>
+<input type="submit" value="Save comment" />

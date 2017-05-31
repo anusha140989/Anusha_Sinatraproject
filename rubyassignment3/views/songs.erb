@@ -1,0 +1,9 @@
+<h1>Student Information</h1>
+<a href="/songs/new">Create a New Student</a>
+<% if @songs.any?
+ %><ul id="songs">
+<% @songs.each do |song|
+ %><li><a href="/songs/<%= ::Temple::Utils.escape_html((song.id)) %>"><%= ::Temple::Utils.escape_html((song.sfname)) %> - <%= ::Temple::Utils.escape_html((song.slname)) %> - <%= ::Temple::Utils.escape_html((song.major)) %> - <%= ::Temple::Utils.escape_html((song.gpa)) %> - <%= ::Temple::Utils.escape_html((song.birthday)) %> - <%= ::Temple::Utils.escape_html((song.address)) %> - <%= ::Temple::Utils.escape_html((song.sid)) %></a></li>
+<% end %></ul><% else
+ %><p>No record have been created yet!</p>
+<% end %>
