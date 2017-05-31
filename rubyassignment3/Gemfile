@@ -1,8 +1,12 @@
 source :rubygems
 
+ruby "2.4.1"
+
 gem "sinatra"
 
 gem "slim"
+
+gem "data_mapper"
 
 gem "sass"
 
